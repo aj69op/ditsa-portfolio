@@ -3,13 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Ditsa</title>
+  
+  <!-- SEO Meta Tags -->
+  <title>Contact & Connect | Ditsa Bakshi</title>
+  <meta name="description" content="Get in touch with Ditsa Bakshi for internships, frontend development projects, or collaborations. Send a message or connect on LinkedIn and GitHub." />
+  <meta name="keywords" content="Contact Ditsa Bakshi, Hire Frontend Developer, Ditsa Email, LinkedIn, GitHub, Web Developer Contact" />
+  <meta name="author" content="Ditsa Bakshi" />
 
-  <link rel="icon" href="images/favicon.png" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact & Connect | Ditsa Bakshi" />
+  <meta property="og:description" content="Reach out to Ditsa Bakshi for frontend development opportunities, internships, or web collaborations." />
+  <meta property="og:image" content="images/ditsa.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Contact & Connect | Ditsa Bakshi" />
+  <meta name="twitter:description" content="Get in touch with Ditsa Bakshi for projects, collaborations, or frontend inquiries." />
+  <meta name="twitter:image" content="images/ditsa.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+
+  <!-- Stylesheets & Fonts -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
   <script defer src="script.js"></script>
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Pacifico&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link
@@ -21,26 +42,34 @@
 <body>
 
   <header class="navbar">
-  <a href="index.html" class="logo">Ditsa</a>
+    <a href="index.html" class="logo">Ditsa</a>
 
-  <!-- Hamburger -->
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+    <div class="nav-right">
+      <!-- Nav links -->
+      <nav id="nav-menu" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
 
-  <!-- Nav links -->
-  <nav id="nav-menu">
-    <a href="about.html">About</a>
-    <a href="skills.html">Skills</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+      <!-- Theme Switcher -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+      </button>
+
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
 
   <!-- CONTACT SECTION -->
-  <section class="contact-section">
+  <main class="contact-section">
 
     <h1 class="contact-title">Let’s Connect</h1>
 
@@ -70,7 +99,7 @@
           <div>
             <h3>GitHub</h3>
             <p>
-              <a href="https://github.com/Ditsa18" target="_blank">
+              <a href="https://github.com/Ditsa18" target="_blank" rel="noopener noreferrer">
                 github.com/Ditsa18
               </a>
             </p>
@@ -78,29 +107,30 @@
         </div>
         
         <div class="contact-card">
-  <i class="fa-brands fa-x-twitter"></i>
-  <div>
-    <h3>X (Twitter)</h3>
-    <p>
-      <a href="https://x.com/BakshiDitsa" target="_blank">
-        @BakshiDitsa
-      </a>
-    </p>
-  </div>
-</div>
+          <i class="fa-brands fa-x-twitter"></i>
+          <div>
+            <h3>X (Twitter)</h3>
+            <p>
+              <a href="https://x.com/BakshiDitsa" target="_blank" rel="noopener noreferrer">
+                @BakshiDitsa
+              </a>
+            </p>
+          </div>
+        </div>
+
         <div class="contact-card">
           <i class="fa-brands fa-linkedin"></i>
           <div>
             <h3>LinkedIn</h3>
             <p>
-              <a href="https://www.linkedin.com/in/ditsa-bakshi-578468323/" target="_blank">
+              <a href="https://www.linkedin.com/in/ditsa-bakshi-578468323/" target="_blank" rel="noopener noreferrer">
                 linkedin.com/in/ditsa-bakshi
               </a>
             </p>
           </div>
         </div>
 
-        <a href="DB RESUME.pdf" class="resume-btn" target="_blank">
+        <a href="DB RESUME.pdf" class="resume-btn" target="_blank" rel="noopener noreferrer">
           <i class="fa-solid fa-file-arrow-down"></i>
           Download Resume
         </a>
@@ -109,23 +139,43 @@
 
       <!-- RIGHT FORM -->
       <div class="contact-form">
-
         <h2>Send a Message</h2>
+        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">
+          Have a question, opportunity, or idea? Drop a note below and I’ll get right back to you!
+        </p>
 
-        <form>
+        <form id="contact-form" novalidate>
           <div class="form-group">
-            <input type="text" placeholder="Your Name" required />
+            <input
+              type="text"
+              id="contact-name"
+              placeholder="Your Name *"
+              required
+              aria-label="Your Name"
+            />
           </div>
 
           <div class="form-group">
-            <input type="email" placeholder="Your Email" required />
+            <input
+              type="email"
+              id="contact-email"
+              placeholder="Your Email *"
+              required
+              aria-label="Your Email"
+            />
           </div>
 
           <div class="form-group">
-            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <textarea
+              id="contact-message"
+              rows="5"
+              placeholder="Your Message *"
+              required
+              aria-label="Your Message"
+            ></textarea>
           </div>
 
-          <button type="submit" class="send-btn">
+          <button type="submit" class="send-btn" id="submit-btn">
             <i class="fa-solid fa-paper-plane"></i>
             Send Message
           </button>
@@ -135,8 +185,38 @@
 
     </div>
 
-  </section>
+  </main>
+
+  <!-- UNIFIED FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Ditsa</a>
+        <p>Designing and building clean, aesthetic web experiences with code and creativity.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/Ditsa18" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ditsa-bakshi-578468323/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://x.com/BakshiDitsa" target="_blank" rel="noopener noreferrer" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:bakshiditsa@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> Ditsa Bakshi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
 </body>
 </html>
-

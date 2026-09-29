@@ -3,10 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Ditsa</title>
+  
+  <!-- SEO Meta Tags -->
+  <title>Projects Showcase | Ditsa Bakshi</title>
+  <meta name="description" content="Explore frontend projects by Ditsa Bakshi: MoodScape (React + Firebase), CashFlow, FashionHub, BookVerse, SmartNotes, and JavaScript games." />
+  <meta name="keywords" content="Ditsa Bakshi Projects, MoodScape, CashFlow, FashionHub, BookVerse, SmartNotes, Frontend Portfolio, React Projects, JavaScript Games" />
+  <meta name="author" content="Ditsa Bakshi" />
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Projects Showcase | Ditsa Bakshi" />
+  <meta property="og:description" content="Explore featured web applications, React apps, and interactive JavaScript games built by Ditsa Bakshi." />
+  <meta property="og:image" content="images/moodscape.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Projects Showcase | Ditsa Bakshi" />
+  <meta name="twitter:description" content="Featured web applications, React projects, and browser extensions built by Ditsa Bakshi." />
+  <meta name="twitter:image" content="images/moodscape.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+
+  <!-- Fonts & Icons -->
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
   <script defer src="script.js"></script>
 
   <!-- Font Awesome -->
@@ -18,246 +41,345 @@
 
 <body>
 
-<header class="navbar">
-  <a href="index.html" class="logo">Ditsa</a>
+  <header class="navbar">
+    <a href="index.html" class="logo">Ditsa</a>
 
-  <!-- Hamburger -->
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+    <div class="nav-right">
+      <!-- Nav links -->
+      <nav id="nav-menu" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-  <!-- Nav links -->
-  <nav id="nav-menu">
-    <a href="about.html">About</a>
-    <a href="skills.html">Skills</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+      <!-- Theme Switcher -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+      </button>
 
-<!-- PROJECTS SECTION -->
-<section class="projects-section">
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
 
-  <h1 class="projects-title">My Projects</h1>
+  <!-- PROJECTS SECTION -->
+  <main class="projects-section">
 
-  <!-- FEATURED PROJECT : MOODSCAPE -->
-  <div class="featured-project">
+    <h1 class="projects-title">My Projects</h1>
 
-    <div class="project-card featured">
-      <img src="images/moodscape.png" alt="MoodScape Project">
-
-      <div class="project-content">
-        <h3>MoodScape</h3>
-        <p>
-          An immersive mental wellness application built with React and Firebase.
-          MoodScape focuses on emotional reflection using color psychology and
-          ambient soundscapes to create a calming digital sanctuary.
-        </p>
-
-        <div class="project-tags">
-          <span>React</span>
-          <span>Firebase</span>
-          <span>Mental Wellness</span>
-        </div>
-
-        <a
-          href="https://moodscape-457e7.web.app/"
-          target="_blank"
-          class="project-btn"
+    <!-- SEARCH & CATEGORY FILTERS -->
+    <div class="projects-controls">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          type="text"
+          id="project-search"
+          placeholder="Search projects by name, tech or keyword..."
+          aria-label="Search projects"
+          autocomplete="off"
+        />
+        <button
+          type="button"
+          id="clear-search"
+          class="clear-search-btn"
+          aria-label="Clear search"
+          style="display: none;"
         >
-          <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-        </a>
+          &times;
+        </button>
+      </div>
 
-        <br><br>
-
-        <a
-          href="https://github.com/Ditsa18/MoodScape"
-          target="_blank"
-          class="project-btn"
-        >
-          <i class="fa-brands fa-github"></i> View on GitHub
-        </a>
+      <div class="filter-tabs" role="tablist" aria-label="Project Categories">
+        <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">
+          <i class="fa-solid fa-border-all"></i> All (7)
+        </button>
+        <button class="filter-tab" data-filter="react" role="tab" aria-selected="false">
+          <i class="fa-brands fa-react"></i> React & Web (4)
+        </button>
+        <button class="filter-tab" data-filter="games" role="tab" aria-selected="false">
+          <i class="fa-solid fa-gamepad"></i> Games (2)
+        </button>
+        <button class="filter-tab" data-filter="tools" role="tab" aria-selected="false">
+          <i class="fa-solid fa-puzzle-piece"></i> Extensions & Tools (1)
+        </button>
       </div>
     </div>
 
-  </div>
+    <!-- FEATURED PROJECT : MOODSCAPE -->
+    <div class="featured-project">
+      <div class="project-card featured" data-category="react web" data-title="MoodScape">
+        <img src="images/moodscape.png" alt="MoodScape Mental Wellness App Preview">
 
-  <!-- OTHER PROJECTS -->
-  <div class="projects-grid">
+        <div class="project-content">
+          <h3>MoodScape</h3>
+          <p>
+            An immersive mental wellness application built with React and Firebase.
+            MoodScape focuses on emotional reflection using color psychology and
+            ambient soundscapes to create a calming digital sanctuary.
+          </p>
 
-    <!-- CashFlow -->
-    <div class="project-card">
-      <img src="images/cashflow.png" alt="CashFlow Project">
+          <div class="project-tags">
+            <span>React</span>
+            <span>Firebase</span>
+            <span>Mental Wellness</span>
+            <span>Audio API</span>
+          </div>
 
-      <div class="project-content">
-        <h3>CashFlow</h3>
-        <p>
-          A React-based financial tracking website built using Vite,
-          focusing on component-based architecture and state management.
-        </p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a
+              href="https://moodscape-457e7.web.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-btn"
+            >
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+            </a>
 
-        <div class="project-tags">
-          <span>React</span>
-          <span>Vite</span>
-          <span>JavaScript</span>
+            <a
+              href="https://github.com/Ditsa18/MoodScape"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-btn"
+              style="background: var(--glass); color: var(--text-dark); border: 1px solid var(--glass-border);"
+            >
+              <i class="fa-brands fa-github"></i> View on GitHub
+            </a>
+          </div>
         </div>
-
-        <a
-          href="https://github.com/Ditsa18/REACT/tree/main/cashflow"
-          target="_blank"
-          class="project-btn"
-        >
-          <i class="fa-brands fa-github"></i> View on GitHub
-        </a>
       </div>
     </div>
 
-    <!-- FashionHub -->
-    <div class="project-card">
-      <img src="images/fashionhub.png" alt="FashionHub Project">
+    <!-- OTHER PROJECTS GRID -->
+    <div class="projects-grid">
 
-      <div class="project-content">
-        <h3>FashionHub</h3>
-        <p>
-          A modern fashion website with clean UI, responsive layouts,
-          and interactive components using vanilla JavaScript.
-        </p>
+      <!-- CashFlow -->
+      <div class="project-card" data-category="react web" data-title="CashFlow">
+        <img src="images/cashflow.png" alt="CashFlow Project">
 
-        <div class="project-tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
+        <div class="project-content">
+          <h3>CashFlow</h3>
+          <p>
+            A React-based financial tracking website built using Vite,
+            focusing on component-based architecture, state management, and real-time calculation.
+          </p>
+
+          <div class="project-tags">
+            <span>React</span>
+            <span>Vite</span>
+            <span>JavaScript</span>
+            <span>Finance</span>
+          </div>
+
+          <a
+            href="https://github.com/Ditsa18/REACT/tree/main/cashflow"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-btn"
+          >
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
         </div>
-
-        <a
-          href="https://github.com/Ditsa18/HTML_CSS_JAVASCRIPT/tree/main/FashionHub"
-          target="_blank"
-          class="project-btn"
-        >
-          <i class="fa-brands fa-github"></i> View on GitHub
-        </a>
       </div>
+
+      <!-- FashionHub -->
+      <div class="project-card" data-category="react web js" data-title="FashionHub">
+        <img src="images/fashionhub.png" alt="FashionHub Project">
+
+        <div class="project-content">
+          <h3>FashionHub</h3>
+          <p>
+            A modern fashion website with clean UI, responsive layouts,
+            product showcase, and interactive components using vanilla JavaScript.
+          </p>
+
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>E-Commerce UI</span>
+          </div>
+
+          <a
+            href="https://github.com/Ditsa18/HTML_CSS_JAVASCRIPT/tree/main/FashionHub"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-btn"
+          >
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- BookVerse -->
+      <div class="project-card" data-category="react web js" data-title="BookVerse">
+        <img src="images/bookverse.png" alt="BookVerse Project">
+
+        <div class="project-content">
+          <h3>BookVerse</h3>
+          <p>
+            A book discovery website focused on clean layouts,
+            intuitive navigation, curated reading lists, and a smooth reading experience.
+          </p>
+
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>UI/UX</span>
+          </div>
+
+          <a
+            href="https://github.com/Ditsa18/HTML_CSS_JAVASCRIPT/tree/main/BookVerse"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-btn"
+          >
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Candy Crush -->
+      <div class="project-card" data-category="games js" data-title="Candy Crush">
+        <img src="images/candycrush.png" alt="Candy Crush Game">
+
+        <div class="project-content">
+          <h3>Candy Crush</h3>
+          <p>
+            A JavaScript-based game inspired by Candy Crush mechanics,
+            implementing 2D grid matrix logic, tile swapping, scoring, and animations.
+          </p>
+
+          <div class="project-tags">
+            <span>JavaScript</span>
+            <span>Game Logic</span>
+            <span>DOM Manipulation</span>
+          </div>
+
+          <a
+            href="https://github.com/Ditsa18/JAVASCRIPT/tree/main/Candy%20Crush"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-btn"
+          >
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Maze Runner -->
+      <div class="project-card" data-category="games js" data-title="Maze Runner">
+        <img src="images/mazerunner.jpeg" alt="Maze Runner Game">
+
+        <div class="project-content">
+          <h3>Maze Runner</h3>
+          <p>
+            A JavaScript-based maze solving game where difficulty increases
+            with each level. Focuses on game logic, path navigation, and
+            progressive challenge design.
+          </p>
+
+          <div class="project-tags">
+            <span>JavaScript</span>
+            <span>Game Logic</span>
+            <span>Levels</span>
+          </div>
+
+          <a
+            href="https://github.com/Ditsa18/JAVASCRIPT/tree/main/Maze%20Game"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-btn"
+          >
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- SmartNotes -->
+      <div class="project-card" data-category="tools js" data-title="SmartNotes">
+        <img src="images/smartnotes.png" alt="SmartNotes Extension">
+
+        <div class="project-content">
+          <h3>SmartNotes</h3>
+          <p>
+            An aesthetic browser extension that lets you attach handwritten-style
+            notes to websites, helping you remember important information while
+            studying, researching, or browsing.
+          </p>
+
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Chrome Extension</span>
+          </div>
+
+          <a
+            href="https://github.com/Ditsa18/Browser-Extensions/tree/main/smartnotes"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-btn"
+          >
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+
     </div>
 
-    <!-- BookVerse -->
-    <div class="project-card">
-      <img src="images/bookverse.png" alt="BookVerse Project">
-
-      <div class="project-content">
-        <h3>BookVerse</h3>
-        <p>
-          A book discovery website focused on clean layouts,
-          intuitive navigation, and a smooth reading experience.
-        </p>
-
-        <div class="project-tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-        </div>
-
-        <a
-          href="https://github.com/Ditsa18/HTML_CSS_JAVASCRIPT/tree/main/BookVerse"
-          target="_blank"
-          class="project-btn"
-        >
-          <i class="fa-brands fa-github"></i> View on GitHub
-        </a>
-      </div>
+    <!-- Empty Search State -->
+    <div id="no-results" class="no-results" role="alert">
+      <i class="fa-solid fa-folder-open"></i>
+      <h3>No Projects Found</h3>
+      <p>Try searching for a different keyword or reset your filter.</p>
+      <button type="button" id="reset-filters" class="reset-filter-btn">
+        <i class="fa-solid fa-arrows-rotate"></i> Reset Filters
+      </button>
     </div>
 
-    <!-- Candy Crush -->
-    <div class="project-card">
-      <img src="images/candycrush.png" alt="Candy Crush Game">
-
-      <div class="project-content">
-        <h3>Candy Crush</h3>
-        <p>
-          A JavaScript-based game inspired by Candy Crush mechanics,
-          implementing grid logic, scoring, and animations.
-        </p>
-
-        <div class="project-tags">
-          <span>JavaScript</span>
-          <span>Game Logic</span>
-        </div>
-
-        <a
-          href="https://github.com/Ditsa18/JAVASCRIPT/tree/main/Candy%20Crush"
-          target="_blank"
-          class="project-btn"
-        >
-          <i class="fa-brands fa-github"></i> View on GitHub
-        </a>
-      </div>
-    </div>
-
-    <!-- Maze Runner -->
-<div class="project-card">
-  <img src="images/mazerunner.jpeg" alt="Maze Runner Game">
-
-  <div class="project-content">
-    <h3>Maze Runner</h3>
-    <p>
-      A JavaScript-based maze solving game where difficulty increases
-      with each level. Focuses on game logic, path navigation, and
-      progressive challenge design.
+    <p class="projects-footer">
+      ✨ More projects coming soon as I continue learning and building!
     </p>
 
-    <div class="project-tags">
-      <span>JavaScript</span>
-      <span>Game Logic</span>
-      <span>Levels</span>
-    </div>
+  </main>
 
-    <a
-      href="https://github.com/Ditsa18/JAVASCRIPT/tree/main/Maze%20Game"
-      target="_blank"
-      class="project-btn"
-    >
-      <i class="fa-brands fa-github"></i> View on GitHub
-    </a>
-  </div>
-</div>
-
-    <!-- SmartNotes -->
-    <div class="project-card">
-      <img src="images/smartnotes.png" alt="SmartNotes Extension">
-
-      <div class="project-content">
-        <h3>SmartNotes</h3>
-        <p>
-          An aesthetic browser extension that lets you attach handwritten-style
-          notes to websites, helping you remember important information while
-          studying, researching, or browsing.
-        </p>
-
-        <div class="project-tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Extension</span>
-        </div>
-
-        <a
-          href="https://github.com/Ditsa18/Browser-Extensions/tree/main/smartnotes"
-          target="_blank"
-          class="project-btn"
-        >
-          <i class="fa-brands fa-github"></i> View on GitHub
-        </a>
+  <!-- UNIFIED FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Ditsa</a>
+        <p>Designing and building clean, aesthetic web experiences with code and creativity.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/Ditsa18" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ditsa-bakshi-578468323/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://x.com/BakshiDitsa" target="_blank" rel="noopener noreferrer" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:bakshiditsa@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
       </div>
     </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> Ditsa Bakshi. All rights reserved.</p>
+    </div>
+  </footer>
 
-  </div>
-
-  <p class="projects-footer">
-    More projects coming soon as I continue learning and building.
-  </p>
-
-</section>
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
 </body>
 </html>

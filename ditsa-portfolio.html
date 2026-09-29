@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Ditsa Bakshi | Frontend Developer & CSE Student</title>
+  <meta name="description" content="Portfolio of Ditsa Bakshi — Computer Science Engineering student and frontend developer crafting aesthetic, responsive, and intuitive web experiences." />
+  <meta name="keywords" content="Ditsa Bakshi, Portfolio, Frontend Developer, React, JavaScript, CSS, HTML, Web Development, UI/UX" />
+  <meta name="author" content="Ditsa Bakshi" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ditsa Bakshi | Frontend Developer & CSE Student" />
+  <meta property="og:description" content="Explore projects, skills, and learning journey of Ditsa Bakshi. Crafting modern, aesthetic digital experiences." />
+  <meta property="og:image" content="images/ditsa.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ditsa Bakshi | Frontend Developer & CSE Student" />
+  <meta name="twitter:description" content="Explore projects, skills, and learning journey of Ditsa Bakshi." />
+  <meta name="twitter:image" content="images/ditsa.jpg" />
+  <meta name="twitter:creator" content="@BakshiDitsa" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- CSS & JS -->
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">Ditsa</a>
+
+    <div class="nav-right">
+      <!-- Nav links -->
+      <nav id="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Theme Switcher -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+      </button>
+
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="hero">
+    <div class="hero-wrapper">
+      <div class="hero-container">
+
+        <div class="pill greeting">Hey there,</div>
+
+        <div class="pill heading">I’m Ditsa</div>
+
+        <div class="photo-wrapper">
+          <img src="images/ditsa.jpg" alt="Ditsa Bakshi portrait">
+        </div>
+
+        <div class="pill role">
+          <i class="fa-solid fa-code"></i>
+          Frontend Developer <br>
+          CSE Student
+        </div>
+
+        <div class="pill tagline">
+          I design clean, aesthetic web experiences.
+        </div>
+
+        <div class="pill stack">
+          <i class="fa-solid fa-layer-group"></i>
+          HTML • CSS • JavaScript • React
+        </div>
+
+      </div>
+
+      <!-- Quick Action CTAs -->
+      <div class="hero-actions">
+        <a href="projects.html" class="hero-cta primary">
+          <i class="fa-solid fa-laptop-code"></i> Explore Projects
+        </a>
+        <a href="contact.html" class="hero-cta secondary">
+          <i class="fa-solid fa-paper-plane"></i> Get in Touch
+        </a>
+        <a href="DB RESUME.pdf" target="_blank" class="hero-cta outline">
+          <i class="fa-solid fa-file-arrow-down"></i> Resume
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- UNIFIED FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Ditsa</a>
+        <p>Designing and building clean, aesthetic web experiences with code and creativity.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/Ditsa18" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ditsa-bakshi-578468323/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://x.com/BakshiDitsa" target="_blank" rel="noopener noreferrer" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:bakshiditsa@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> Ditsa Bakshi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+</body>
+</html>

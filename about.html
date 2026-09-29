@@ -3,59 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me | Ditsa</title>
+  
+  <!-- SEO Meta Tags -->
+  <title>About Me | Ditsa Bakshi</title>
+  <meta name="description" content="Learn more about Ditsa Bakshi, Computer Science student at Narula Institute of Technology, frontend developer, and UI enthusiast." />
+  <meta name="keywords" content="Ditsa Bakshi, About Ditsa, Frontend Developer, CSE Student, Narula Institute of Technology, Web Developer" />
+  <meta name="author" content="Ditsa Bakshi" />
 
-  <link rel="icon" href="images/favicon.png" />
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Pacifico&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script>
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="About Me | Ditsa Bakshi" />
+  <meta property="og:description" content="Computer Science Engineering student passionate about frontend web development, design consistency, and clean code." />
+  <meta property="og:image" content="images/ditsa2.jpeg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="About Me | Ditsa Bakshi" />
+  <meta name="twitter:description" content="Frontend developer & CSE student creating clean, aesthetic, and user-friendly web experiences." />
+  <meta name="twitter:image" content="images/ditsa2.jpeg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+
   <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- CSS & JS -->
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 
 <body>
 
   <header class="navbar">
-  <a href="index.html" class="logo">Ditsa</a>
+    <a href="index.html" class="logo">Ditsa</a>
 
-  <!-- Hamburger -->
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+    <div class="nav-right">
+      <!-- Nav links -->
+      <nav id="nav-menu" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-  <!-- Nav links -->
-  <nav id="nav-menu">
-    <a href="about.html">About</a>
-    <a href="skills.html">Skills</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+      <!-- Theme Switcher -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+      </button>
+
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
 
   <!-- ABOUT SECTION -->
-  <section class="about-section">
-
+  <main class="about-section">
     <div class="about-container">
 
       <!-- LEFT: PHOTO -->
       <div class="about-photo">
-        <img src="images/ditsa2.jpeg" alt="Ditsa" />
+        <img src="images/ditsa2.jpeg" alt="Ditsa Bakshi" />
         <p class="photo-caption">Frontend Developer • CSE Student</p>
       </div>
 
       <!-- RIGHT: CONTENT -->
       <div class="about-content">
-
         <h1>About Me</h1>
 
         <!-- CARDS -->
         <div class="about-cards">
-
           <!-- EXPERIENCE -->
           <div class="info-card">
             <i class="fa-solid fa-rocket"></i>
@@ -73,12 +103,11 @@
             <i class="fa-solid fa-graduation-cap"></i>
             <h3>Education</h3>
             <p>
-              B.Tech – Computer Science & Engineering<br />
+              <strong>B.Tech – Computer Science & Engineering</strong><br />
               Narula Institute of Technology<br />
               <span>Aug 2024 – May 2028</span>
             </p>
           </div>
-
         </div>
 
         <!-- DESCRIPTION -->
@@ -103,11 +132,51 @@
             grow, collaborate, and contribute to meaningful products while
             continuously improving my skills.
           </p>
+
+          <div style="margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="DB RESUME.pdf" target="_blank" class="project-btn" style="text-decoration: none;">
+              <i class="fa-solid fa-file-arrow-down"></i> View Resume
+            </a>
+            <a href="contact.html" class="project-btn" style="background: var(--glass); color: var(--text-dark); border: 1px solid var(--glass-border); text-decoration: none;">
+              <i class="fa-solid fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
         </div>
 
       </div>
     </div>
-  </section>
+  </main>
+
+  <!-- UNIFIED FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">Ditsa</a>
+        <p>Designing and building clean, aesthetic web experiences with code and creativity.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/Ditsa18" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ditsa-bakshi-578468323/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://x.com/BakshiDitsa" target="_blank" rel="noopener noreferrer" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:bakshiditsa@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> Ditsa Bakshi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
 </body>
 </html>

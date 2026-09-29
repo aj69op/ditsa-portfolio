@@ -1,0 +1,9 @@
+# Dependencies & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.tempmediaStorage/
+
+# Scratch & debug scripts
+scratch/
+*.log
