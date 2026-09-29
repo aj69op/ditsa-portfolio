@@ -1,8 +1,8 @@
 # 📋 DITSA BAKSHI — PORTFOLIO PROJECT PLAN & REFERENCE GUIDE
 
 > **Project Name:** `PTSD_Ditsa_Qween` / `ditsa-portfolio`  
-> **Repository:** [github.com/Ditsa18/ditsa-portfolio](https://github.com/Ditsa18/ditsa-portfolio)  
-> **Live URL:** [ditsa18.github.io/ditsa-portfolio](https://ditsa18.github.io/ditsa-portfolio/)  
+> **Repository:** [github.com/aj69op/ditsa-portfolio](https://github.com/aj69op/ditsa-portfolio)  
+> **Live URL:** [aj69op.github.io/ditsa-portfolio](https://aj69op.github.io/ditsa-portfolio/)  
 > **Last Updated:** September 29, 2026  
 
 ---
